@@ -4,6 +4,8 @@ $hunyadi-yellow: #F6AE50ff;
 $black: #000000ff;
 $jet: #323232ff;
 $ash-gray: #C2D5C3ff; */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 
 body {
   background-color: lightgray;
@@ -28,6 +30,7 @@ body {
   height: 450px;
   width: 300px;
   padding: 15px;
+  
   border-radius: 20px;
   justify-content: center;
   align-items: center;
@@ -49,6 +52,8 @@ body {
   text-align: right;
   border: 5px solid black;
   border-style: ridge ;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
 }
 
 .numberDisplay {
@@ -76,7 +81,10 @@ body {
     flex-grow: 0;
     background-color: #e7e7e7ff;
     border-radius: 10px;
-    font-size: large;
+    font-size: small;
+    font-family: 'Space Mono', monospace;
+    font-weight: 600;
+
   }
   
 .numberRow {
@@ -93,9 +101,26 @@ body {
   border-width: 1px;
   border-radius: 10px;
   font-size: large;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+
 }
 
 
+.operatorButton {
+    font-family: 'Space Mono', monospace;
+    font-size: large;
+    font-weight: 700;
+}
+
 .equalsButton {
     background-color: #F6AE50ff;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+
+}
+
+.github {
+    color: #e7e7e7ff;
+    font-family: 'Space Mono', monospace;
 }

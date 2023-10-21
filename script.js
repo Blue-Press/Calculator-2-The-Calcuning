@@ -60,9 +60,9 @@ document.addEventListener("keydown", function (event) {
       } else {
         numberDisplay.textContent =
           parseFloat(firstNumber) / parseFloat(secondNumber);
-      }
+      } 
     }
-  }
+  }         console.log(numberDisplay.textContent);
 });
 
 document.addEventListener("keydown", function (event) {
@@ -97,7 +97,6 @@ operatorButtons.forEach(function (button) {
 
 equalsButton.addEventListener("click", function () {
   secondNumber = numberDisplay.textContent;
-  console.log(firstNumber, secondNumber);
   if (operatorType === "+") {
     numberDisplay.textContent =
       parseFloat(firstNumber) + parseFloat(secondNumber);
@@ -114,7 +113,7 @@ equalsButton.addEventListener("click", function () {
       numberDisplay.textContent =
         parseFloat(firstNumber) / parseFloat(secondNumber);
     }
-  }
+  }         console.log(numberDisplay.textContent);
 });
 
 decimalButton.addEventListener("click", function () {
