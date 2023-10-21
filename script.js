@@ -22,6 +22,15 @@ document.addEventListener("keydown", function(event) {
   }
 } } )
 
+document.addEventListener("keydown", function(event) {
+  if(event.key === "+" || event.key === "-" || event.key === "/" || event.key === "*") {
+    operatorType = event.key;
+    firstNumber = numberDisplay.textContent;
+    firstNumberEntered = true;
+    decimalUsed = false;
+} } ) 
+
+
 numberButtons.forEach(function (button) {
   button.addEventListener("click", function () {
     if (!firstNumberEntered) {
@@ -52,7 +61,7 @@ equalsButton.addEventListener("click", function () {
   } else if (operatorType === "-") {
     numberDisplay.textContent =
       parseFloat(firstNumber) - parseFloat(secondNumber);
-  } else if (operatorType === "x") {
+  } else if (operatorType === "*") {
     numberDisplay.textContent =
       parseFloat(firstNumber) * parseFloat(secondNumber);
   } else if (operatorType === "/") {
