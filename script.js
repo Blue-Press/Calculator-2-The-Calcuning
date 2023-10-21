@@ -11,13 +11,16 @@ let operatorType = "";
 let firstNumberEntered = false;
 let decimalUsed = false;
 
-numberDisplay.addEventListener("input", function () {
+document.addEventListener("keydown", function(event) {
+  if (event.key >= '0' && event.key <= '9') {
   if (!firstNumberEntered) {
+    numberDisplay.textContent += event.key;
   } else {
     numberDisplay.textContent = "";
+    numberDisplay.textContent += event.key;
     firstNumberEntered = false;
   }
-});
+} } )
 
 numberButtons.forEach(function (button) {
   button.addEventListener("click", function () {
@@ -30,6 +33,7 @@ numberButtons.forEach(function (button) {
     }
   });
 });
+
 operatorButtons.forEach(function (button) {
   button.addEventListener("click", function () {
     operatorType = this.textContent;
