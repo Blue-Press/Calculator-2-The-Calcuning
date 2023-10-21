@@ -1,8 +1,12 @@
+const backspaceButton = document.querySelector(".backspaceButton");
+const clearButton = document.querySelector(".clearButton");
 const numberButtons = document.querySelectorAll(".numberButton");
 const operatorButtons = document.querySelectorAll(".operatorButton");
 const equalsButton = document.querySelector(".equalsButton");
 const decimalButton = document.querySelector(".decimalButton");
 const numberDisplay = document.querySelector(".numberDisplay");
+
+
 
 let firstNumber = "";
 let secondNumber = "";
@@ -61,6 +65,15 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+document.addEventListener("keydown", function (event) {
+  if(event.key === "Backspace") {
+    let splitDisplay = numberDisplay.textContent.split("");
+    splitDisplay.pop()
+    console.log(splitDisplay);
+    numberDisplay.textContent = splitDisplay.join("");
+  }
+})
+
 numberButtons.forEach(function (button) {
   button.addEventListener("click", function () {
     if (!firstNumberEntered) {
@@ -110,3 +123,19 @@ decimalButton.addEventListener("click", function () {
     decimalUsed = true;
   }
 });
+
+backspaceButton.addEventListener("click", function () {
+  let splitDisplay = numberDisplay.textContent.split("");
+  splitDisplay.pop()
+  console.log(splitDisplay);
+  numberDisplay.textContent = splitDisplay.join("");
+})
+
+clearButton.addEventListener("click", function () {
+firstNumber = "";
+secondNumber = "";
+operatorType = "";
+firstNumberEntered = false;
+decimalUsed = false;
+numberDisplay.textContent = "";
+})
