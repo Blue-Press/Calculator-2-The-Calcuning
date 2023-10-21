@@ -30,6 +30,29 @@ document.addEventListener("keydown", function(event) {
     decimalUsed = false;
 } } ) 
 
+document.addEventListener("keydown", function(event) {
+  if(event.key === "=" || event.key === "Enter") {
+    secondNumber = numberDisplay.textContent;
+    console.log(firstNumber, secondNumber);
+    if (operatorType === "+") {
+      numberDisplay.textContent =
+        parseFloat(firstNumber) + parseFloat(secondNumber);
+    } else if (operatorType === "-") {
+      numberDisplay.textContent =
+        parseFloat(firstNumber) - parseFloat(secondNumber);
+    } else if (operatorType === "*") {
+      numberDisplay.textContent =
+        parseFloat(firstNumber) * parseFloat(secondNumber);
+    } else if (operatorType === "/") {
+      if (firstNumber == 0 || secondNumber == 0) {
+        numberDisplay.textContent = "Universe imploding in 3...2...";
+      } else {
+        numberDisplay.textContent =
+          parseFloat(firstNumber) / parseFloat(secondNumber);
+      }
+    }
+  }
+})
 
 numberButtons.forEach(function (button) {
   button.addEventListener("click", function () {
