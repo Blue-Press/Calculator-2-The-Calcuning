@@ -1,10 +1,101 @@
+/* SCSS HEX 
+$platinum: #E7E7E7ff;
+$hunyadi-yellow: #F6AE50ff;
+$black: #000000ff;
+$jet: #323232ff;
+$ash-gray: #C2D5C3ff; */
+
 body {
-    background-color: black;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.backgroundContainer {
+    padding: 30px;
+    background-color: #5b7043;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.calcContainer {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  width: 300px;
+  padding: 15px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #323232ff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.displayContainer {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 95%;
+  height: 50px;
+  background-color: #c2d5c3ff;
+  border-radius: 15px;
+  font-size: large;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+  border: 5px solid black;
+  border-style: ridge ;
+}
+
+.numberDisplay {
+    margin: 5px;
+    font-size: 30px;
+}
+
+.buttonContainer {
+  flex-grow: 1;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.topNumberRow {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+}
+
+.topButton {
+    flex-grow: 0;
+    background-color: #e7e7e7ff;
+    border-radius: 10px;
+    font-size: large;
+  }
+  
+.numberRow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.numberRow button {
+  width: 67.81px;
+  flex-grow: 1;
+  margin: 2px;
+  border-style: ridge;
+  border-width: 1px;
+  border-radius: 10px;
+  font-size: large;
 }
 
 
-.numberDisplay {
-    width: 100px;
-    height: 100px;
-    background-color: aliceblue;
+.equalsButton {
+    background-color: #F6AE50ff;
 }

@@ -7,11 +7,16 @@
     <link rel="stylesheet" , href="style.css" />
   </head>
   <body>
+    <div class="backgroundContainer">
+    <div class="calcContainer">
+      <div class="displayContainer">
     <div class="numberDisplay"></div>
-    <div class="numberRow">
-      <button class="backspaceButton"><--</button>
+  </div>
+  <div class="buttonContainer">
+    <div class="topNumberRow" id="topRow">
+      <button class="backspaceButton topButton">⟵</button>
    
-      <button class="clearButton">Clear</button>
+      <button class="clearButton topButton">Clear</button>
     </div>
     <div class="numberRow">
       <button class="numberButton">7</button>
@@ -36,7 +41,10 @@
     <button class="decimalButton">.</button>
     <button class="operatorButton">+</button>
     <button class="equalsButton">=</button> 
+  </div>
     </div>     
-    <script src="script.js"></script>
+  </div>
+</div>
+  <script src="script.js"></script>
   </body>
 </html>
