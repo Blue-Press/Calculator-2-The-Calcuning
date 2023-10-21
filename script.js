@@ -11,27 +11,34 @@ let operatorType = "";
 let firstNumberEntered = false;
 let decimalUsed = false;
 
-document.addEventListener("keydown", function(event) {
-  if (event.key >= '0' && event.key <= '9') {
-  if (!firstNumberEntered) {
-    numberDisplay.textContent += event.key;
-  } else {
-    numberDisplay.textContent = "";
-    numberDisplay.textContent += event.key;
-    firstNumberEntered = false;
+document.addEventListener("keydown", function (event) {
+  if (event.key >= "0" && event.key <= "9") {
+    if (!firstNumberEntered) {
+      numberDisplay.textContent += event.key;
+    } else {
+      numberDisplay.textContent = "";
+      numberDisplay.textContent += event.key;
+      firstNumberEntered = false;
+    }
   }
-} } )
+});
 
-document.addEventListener("keydown", function(event) {
-  if(event.key === "+" || event.key === "-" || event.key === "/" || event.key === "*") {
+document.addEventListener("keydown", function (event) {
+  if (
+    event.key === "+" ||
+    event.key === "-" ||
+    event.key === "/" ||
+    event.key === "*"
+  ) {
     operatorType = event.key;
     firstNumber = numberDisplay.textContent;
     firstNumberEntered = true;
     decimalUsed = false;
-} } ) 
+  }
+});
 
-document.addEventListener("keydown", function(event) {
-  if(event.key === "=" || event.key === "Enter") {
+document.addEventListener("keydown", function (event) {
+  if (event.key === "=" || event.key === "Enter") {
     secondNumber = numberDisplay.textContent;
     console.log(firstNumber, secondNumber);
     if (operatorType === "+") {
@@ -52,7 +59,7 @@ document.addEventListener("keydown", function(event) {
       }
     }
   }
-})
+});
 
 numberButtons.forEach(function (button) {
   button.addEventListener("click", function () {
