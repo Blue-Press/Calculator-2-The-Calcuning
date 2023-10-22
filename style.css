@@ -4,8 +4,7 @@ $hunyadi-yellow: #F6AE50ff;
 $black: #000000ff;
 $jet: #323232ff;
 $ash-gray: #C2D5C3ff; */
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 
 body {
   background-color: lightgray;
@@ -18,10 +17,10 @@ body {
 }
 
 .backgroundContainer {
-    padding: 30px;
-    background-color: #5b7043;
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  background-color: #5b7043;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .calcContainer {
@@ -30,7 +29,6 @@ body {
   height: 450px;
   width: 300px;
   padding: 15px;
-  
   border-radius: 20px;
   justify-content: center;
   align-items: center;
@@ -45,20 +43,21 @@ body {
   height: 50px;
   background-color: #c2d5c3ff;
   border-radius: 15px;
-  font-size: large;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   text-align: right;
   border: 5px solid black;
-  border-style: ridge ;
-  font-family: 'Space Mono', monospace;
-  font-weight: 700;
+  border-style: ridge;
+  font-family: "Space Mono", monospace;
+  font-weight: 200;
+  font-size: small;
+  text-wrap: nowrap;
 }
 
 .numberDisplay {
-    margin: 5px;
-    font-size: 30px;
+  margin: 5px;
+  font-size: 30px;
 }
 
 .buttonContainer {
@@ -78,15 +77,14 @@ body {
 }
 
 .topButton {
-    flex-grow: 0;
-    background-color: #e7e7e7ff;
-    border-radius: 10px;
-    font-size: small;
-    font-family: 'Space Mono', monospace;
-    font-weight: 600;
+  flex-grow: 0;
+  background-color: #e7e7e7ff;
+  border-radius: 10px;
+  font-size: small;
+  font-family: "Space Mono", monospace;
+  font-weight: 600;
+}
 
-  }
-  
 .numberRow {
   width: 100%;
   display: flex;
@@ -101,26 +99,23 @@ body {
   border-width: 1px;
   border-radius: 10px;
   font-size: large;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-weight: 700;
-
 }
 
-
 .operatorButton {
-    font-family: 'Space Mono', monospace;
-    font-size: large;
-    font-weight: 700;
+  font-family: "Space Mono", monospace;
+  font-size: large;
+  font-weight: 700;
 }
 
 .equalsButton {
-    background-color: #F6AE50ff;
-    font-family: 'Space Mono', monospace;
-    font-weight: 700;
-
+  background-color: #f6ae50ff;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
 }
 
 .github {
-    color: #e7e7e7ff;
-    font-family: 'Space Mono', monospace;
+  color: #e7e7e7ff;
+  font-family: "Space Mono", monospace;
 }
