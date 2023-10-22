@@ -6,14 +6,20 @@ const equalsButton = document.querySelector(".equalsButton");
 const decimalButton = document.querySelector(".decimalButton");
 const numberDisplay = document.querySelector(".numberDisplay");
 
-
-
 let firstNumber = "";
 let secondNumber = "";
 let operatorType = "";
 
 let firstNumberEntered = false;
 let decimalUsed = false;
+
+clearButton.addEventListener("click", function () {
+  operatorType = "";
+  firstNumberEntered = false;
+  decimalUsed = false;
+  numberDisplay.textContent = "";
+  clearButton.blur();
+});
 
 document.addEventListener("keydown", function (event) {
   if (event.key >= "0" && event.key <= "9") {
@@ -44,7 +50,7 @@ document.addEventListener("keydown", function (event) {
 document.addEventListener("keydown", function (event) {
   if (event.key === "=" || event.key === "Enter") {
     secondNumber = numberDisplay.textContent;
-    console.log(firstNumber, secondNumber);
+    console.log(firstNumber, operatorType, secondNumber);
     if (operatorType === "+") {
       numberDisplay.textContent =
         parseFloat(firstNumber) + parseFloat(secondNumber);
@@ -60,19 +66,19 @@ document.addEventListener("keydown", function (event) {
       } else {
         numberDisplay.textContent =
           parseFloat(firstNumber) / parseFloat(secondNumber);
-      } 
+      }
     }
-  }         console.log(numberDisplay.textContent);
+  }
+  console.log(numberDisplay.textContent);
 });
 
 document.addEventListener("keydown", function (event) {
-  if(event.key === "Backspace") {
+  if (event.key === "Backspace") {
     let splitDisplay = numberDisplay.textContent.split("");
-    splitDisplay.pop()
-    console.log(splitDisplay);
+    splitDisplay.pop();
     numberDisplay.textContent = splitDisplay.join("");
   }
-})
+});
 
 numberButtons.forEach(function (button) {
   button.addEventListener("click", function () {
@@ -113,7 +119,8 @@ equalsButton.addEventListener("click", function () {
       numberDisplay.textContent =
         parseFloat(firstNumber) / parseFloat(secondNumber);
     }
-  }         console.log(numberDisplay.textContent);
+  }
+  console.log(numberDisplay.textContent);
 });
 
 decimalButton.addEventListener("click", function () {
@@ -125,16 +132,7 @@ decimalButton.addEventListener("click", function () {
 
 backspaceButton.addEventListener("click", function () {
   let splitDisplay = numberDisplay.textContent.split("");
-  splitDisplay.pop()
+  splitDisplay.pop();
   console.log(splitDisplay);
   numberDisplay.textContent = splitDisplay.join("");
-})
-
-clearButton.addEventListener("click", function () {
-firstNumber = "";
-secondNumber = "";
-operatorType = "";
-firstNumberEntered = false;
-decimalUsed = false;
-numberDisplay.textContent = "";
-})
+});
